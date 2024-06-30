@@ -34,6 +34,6 @@ class SinglePerceptron:
                 step_out = self.step(out)
                 epoch_accuracy.append(1 if step_out == labels[i] else 0)
                 self.backward(loss, inst)
-            print('epoch loss:', epoch_loss/len(instances), 'accuracy', sum(epoch_accuracy)/len(instances))
+            print(f'epoch {epoch+1}:','loss:', epoch_loss/len(instances), 'accuracy', sum(epoch_accuracy)/len(instances))
 
 
