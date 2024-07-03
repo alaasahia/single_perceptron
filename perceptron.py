@@ -40,7 +40,7 @@ class SinglePerceptron:
         if decision_boundary:
             #visualize the decision boundary using the formula x2 = -(x1 x w1 + b)/w2
             x1_range = np.linspace(min(self.reduced_data[:, 0]), max(self.reduced_data[:, 1]), 100)
-            x2_bound = -(self.reduced_weights[0] * x1_range + self._bias) / self._bias
+            x2_bound = -(self.reduced_weights[0] * x1_range + self._bias) / self.reduced_weights[1]
             plt.plot(x1_range, x2_bound, color='black', label='Decision Boundary')
         plt.title(f'Data Visualization')
         plt.xlabel('Component 1')
